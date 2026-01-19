@@ -11,20 +11,38 @@
 
 BioFi is a Web3 e-commerce platform that enables DAOs to sell direct-to-consumer biohacking and supplementation products. The first client is **DERMA DAO**, a Korean skincare DAO launching their beauty brand.
 
-Jay wants to build **BioSense** - an AI-powered content marketing system that acts as a "virtual sales rep" for brands. The system creates AI personas that generate and distribute short-form video content (primarily TikTok).
+Jay wants to build **BioSense** - a content marketing system where AI personas act as both **sales reps** and **brand ambassadors** through short-form video content (primarily TikTok).
+
+### The AI Persona: Sales Rep + Brand Ambassador
+
+| Role | Focus | Content Style |
+|------|-------|---------------|
+| **Brand Ambassador** | Build awareness & trust | Educational, entertaining, story-driven |
+| **Sales Rep** | Drive conversions | Product highlights, CTAs, links to BioFi |
+
+Most content is brand ambassador style (80%) with sales moments woven in naturally (20%).
 
 ### The Two Pillars
 
 | Pillar | Goal | System Responsibility |
 |--------|------|----------------------|
-| 🎯 **ATTENTION** | Get eyeballs on content | AI generates & distributes viral content |
+| 🎯 **ATTENTION** | Get eyeballs on content | Research trends, distribute content, track engagement |
 | 💰 **CONVERSION** | Turn viewers into buyers | Track the funnel; product story does the selling |
 
-**Key Insight**: Attention is primary (~70% of effort). Conversion is tracked but the product's unique ingredients and story handle the actual selling.
+### Division of Labor
 
-**Priority**: Speed over perfection. Get content distributing immediately and refine the system in parallel.
+| Person | Role | Focus |
+|--------|------|-------|
+| **Hyke** | Video Production | Creates the actual video content for each persona |
+| **Matt** | Systems & Automation | Builds tools to support Hyke: research, distribution, analytics |
 
-**Timeline**: First 5+ videos live on TikTok by end of January 2025.
+**Matt's Value**: Connect systems together to speed up Hyke's work via low-hanging fruit automation - NOT building full AI video generation.
+
+**MVP Focus**: 1 persona/strategy first. Scale to multiple personas after MVP proves out.
+
+**Priority**: Speed over perfection. Get content distributing immediately.
+
+**Timeline**: First 5+ videos from 1 persona live on TikTok by end of January 2025.
 
 ---
 
@@ -32,16 +50,16 @@ Jay wants to build **BioSense** - an AI-powered content marketing system that ac
 
 ### The Core Concept
 
-An AI agent system that:
-1. **Researches** what content is working in the biohacking/skincare space
-2. **Generates** video content through multiple AI "personas" (virtual influencers)
-3. **Distributes** content to TikTok (and potentially other platforms)
-4. **Analyzes** performance and optimizes strategies
+A content marketing system that:
+1. **Researches** what content is working in the biohacking/skincare space (Matt automates)
+2. **Produces** video content through multiple "personas" (Hyke creates)
+3. **Distributes** content to TikTok and potentially other platforms (Matt automates)
+4. **Analyzes** performance and optimizes strategies (Matt builds analytics)
 
 ### The Multi-Persona Strategy
 
 Jay wants to test multiple strategies simultaneously:
-- Create ~10 TikTok accounts, each with a different AI persona
+- Create ~10 TikTok accounts, each with a different persona
 - Example personas mentioned:
   - Fitness persona
   - Female model persona
@@ -50,11 +68,41 @@ Jay wants to test multiple strategies simultaneously:
 - Fold failing strategies, double down on winners
 - Continuously iterate with new personas
 
-### How Jay Described It
+Each persona embodies both roles:
+
+| Persona | Brand Ambassador Content | Sales Rep Content |
+|---------|-------------------------|-------------------|
+| Fitness persona | Workout tips, wellness advice, biohacking education | "This ingredient helped my recovery..." |
+| Female model persona | Skincare routines, beauty tips, lifestyle | "The secret ingredient in my routine..." |
+| Skincare mom persona | Family wellness, natural products, ingredient education | "Why I switched to DERMA DAO for my family..." |
+
+### The AI Persona Concept: Sales Rep + Brand Ambassador
+
+Jay described the personas as acting like both a **sales rep** and a **brand ambassador**:
 
 > "BioFi will become, it will be like a sales rep, in a way... meaning that it should create attention"
 
+#### Sales Rep Role
+- **Goal**: Drive traffic and conversions to BioFi
+- **Behavior**: Highlights product benefits, includes CTAs, links to product pages
+- **Metric**: Conversion rate, revenue generated
+
+#### Brand Ambassador Role
+- **Goal**: Build awareness and trust for DERMA DAO
+- **Behavior**: Shares the brand story, educates about unique ingredients, builds community
+- **Metric**: Follower growth, engagement, brand sentiment
+
+#### How They Work Together
+
+The persona is NOT just a hard-sell salesperson. It's a trusted voice that:
+1. **Educates** about biohacking/skincare (Brand Ambassador)
+2. **Entertains** with engaging content (Brand Ambassador)
+3. **Builds curiosity** about unique ingredients (Brand Ambassador → Sales Rep)
+4. **Guides to purchase** when the viewer is ready (Sales Rep)
+
 > "The conversion should happen from the ingredients, or a story of DERMA DAO... the skincare has a chemical compound called ABC. ABC has been using by Jennifer Lopez... and then the conversion and the checkout should be leading directly to BioFi"
+
+**Key Insight**: The "brand ambassador" content creates the attention and trust. The "sales rep" role converts that attention into purchases. Most content should be brand ambassador style (entertaining, educational) with sales rep moments woven in naturally.
 
 ---
 
@@ -119,7 +167,7 @@ This changes how we build and measure the system:
 
 ## System Architecture Overview
 
-Organized by the two pillars:
+Organized by the two pillars, with clear separation of Hyke's work (video production) and Matt's work (systems/automation):
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -130,29 +178,29 @@ Organized by the two pillars:
 │  ║                    🎯 ATTENTION PILLAR                                ║  │
 │  ╠═══════════════════════════════════════════════════════════════════════╣  │
 │  ║                                                                       ║  │
-│  ║  1. LISTENING LAYER                                                   ║  │
+│  ║  1. RESEARCH/LISTENING [MATT]                                         ║  │
 │  ║     - Scrape TikTok for trending biohacking/skincare content         ║  │
-│  ║     - Identify winning content patterns and hooks                     ║  │
+│  ║     - Surface winning content patterns to inform Hyke                 ║  │
 │  ║     - Track competitor/influencer strategies                          ║  │
 │  ║                                                                       ║  │
-│  ║  2. PERSONA/STRATEGY LAYER                                            ║  │
-│  ║     - AI agents for each brand persona (fitness, skincare mom, etc.) ║  │
+│  ║  2. PERSONA/STRATEGY [MATT + HYKE]                                    ║  │
+│  ║     - Define persona templates and strategy docs                      ║  │
 │  ║     - Knowledge base with strategy rules (MD/PDF)                     ║  │
-│  ║     - Multiple strategies running in parallel                         ║  │
+│  ║     - Multiple strategies to test in parallel                         ║  │
 │  ║                                                                       ║  │
-│  ║  3. CONTENT GENERATION LAYER                                          ║  │
-│  ║     - AI generates video scripts/content per persona                  ║  │
-│  ║     - Integration with video tools (HeyGen, D-ID, etc.)              ║  │
-│  ║     - "Turn trending content into our version"                        ║  │
+│  ║  3. VIDEO PRODUCTION [HYKE - PRIMARY]                                 ║  │
+│  ║     - Hyke creates the actual video content                           ║  │
+│  ║     - NOT fully AI-generated - human creative work                    ║  │
+│  ║     - Matt provides supporting automation where helpful               ║  │
 │  ║                                                                       ║  │
-│  ║  4. DISTRIBUTION LAYER                                                ║  │
-│  ║     - Post to TikTok (primary)                                        ║  │
-│  ║     - Manage multiple accounts (~10 personas)                         ║  │
-│  ║     - Scheduling and automation                                       ║  │
+│  ║  4. DISTRIBUTION [MATT]                                               ║  │
+│  ║     - Automate posting to TikTok                                      ║  │
+│  ║     - MVP: 1 account, Scale: 5-10 accounts                            ║  │
+│  ║     - Scheduling and content queue management                         ║  │
 │  ║                                                                       ║  │
-│  ║  5. ATTENTION ANALYTICS                                               ║  │
+│  ║  5. ATTENTION ANALYTICS [MATT]                                        ║  │
 │  ║     - Track: views, watch time, engagement, follower growth          ║  │
-│  ║     - A/B test personas and strategies                                ║  │
+│  ║     - Surface insights to guide Hyke's content strategy               ║  │
 │  ║     - Identify winners, fold losers, iterate                          ║  │
 │  ║                                                                       ║  │
 │  ╚═══════════════════════════════════════════════════════════════════════╝  │
@@ -162,12 +210,12 @@ Organized by the two pillars:
 │  ║                    💰 CONVERSION PILLAR                               ║  │
 │  ╠═══════════════════════════════════════════════════════════════════════╣  │
 │  ║                                                                       ║  │
-│  ║  6. CONVERSION TRACKING                                               ║  │
+│  ║  6. CONVERSION TRACKING [MATT]                                        ║  │
 │  ║     - Track clicks from TikTok → BioFi                               ║  │
 │  ║     - UTM parameters per persona/video                                ║  │
 │  ║     - Attribution: which content drives purchases                     ║  │
 │  ║                                                                       ║  │
-│  ║  7. CONVERSION ANALYTICS                                              ║  │
+│  ║  7. CONVERSION ANALYTICS [MATT]                                       ║  │
 │  ║     - Track: CTR, add-to-cart, purchases, revenue                    ║  │
 │  ║     - Revenue per persona/strategy                                    ║  │
 │  ║     - Funnel analysis: where do users drop off?                       ║  │
@@ -180,25 +228,55 @@ Organized by the two pillars:
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
+### Matt's Focus: Automation & Systems to Support Hyke
+
+The goal is to **remove friction from Hyke's workflow** through:
+
+1. **Automated Research**: Hyke shouldn't have to manually hunt for trending content
+2. **Automated Distribution**: Hyke shouldn't have to manually post to 10 accounts
+3. **Automated Analytics**: Easy visibility into what's working
+4. **Content Pipeline**: Smooth handoff from Hyke's videos → scheduled posting
+
 ---
 
 ## MVP vs Full System
 
 ### Option A: MVP (Recommended to Start)
 
-**Scope**:
+**Key Decision: Focus on 1 Persona/Strategy First**
+
+The MVP should prove the concept with **one strategy** before scaling to 10.
+
+**MVP Scope**:
+- **1 TikTok account** with 1 persona strategy
 - Backend only - no front-end dashboard
 - Strategy defined via MD/PDF knowledge documents
-- 10 TikTok accounts with different AI personas
-- Manual/semi-automated content generation
+- Manual/semi-automated content workflow
 - Basic analytics tracking
 
-**Goal**: First 5 strategy videos distributed by **end of January 2025**
+**Goal**: First 5 videos from 1 persona distributed by **end of January 2025**
 
-**Approach**: 
+**Why 1 Strategy First**:
+1. Faster to launch - less complexity
+2. Learn what works before scaling
+3. Prove the pipeline works end-to-end
+4. Reduce Hyke's initial workload
+5. Get data to inform which strategies to add next
+
+**Approach**:
 > "Even though it's a bad strategy, at least we will put in something... if it do very well in the next three to four weeks and it has some hits, that it's sort of proven strategy that this is working"
 
-### Option B: Full System (Future Phase)
+### Option B: Scale Phase (After MVP Proves Out)
+
+Once the MVP is working and we have data:
+
+**Scale Scope**:
+- Expand to 5-10 TikTok accounts with different personas
+- Multi-account distribution automation
+- Compare persona performance
+- Scale winning strategies, fold losers
+
+### Option C: Full System (Future Phase)
 
 **Additional Scope**:
 - Front-end platform for DAO owners
@@ -211,25 +289,35 @@ Organized by the two pillars:
 
 ## Division of Responsibilities
 
-### Matt (Software Development)
+### Hyke (Video Production - Primary Content Creator)
 
 | Component | Description |
 |-----------|-------------|
-| Social Listening System | Scraping/monitoring for trending content |
-| AI Persona Agents | Building the agents that represent brand personas |
-| Content Generation Pipeline | Integration with video generation tools |
-| Distribution Automation | TikTok API integration, scheduling |
-| Analytics Infrastructure | Tracking, conversion monitoring, performance analysis |
-| Strategy Optimization AI | System that analyzes what's working |
-| System Architecture | Overall design and implementation |
+| **Video Production** | Creates the actual video content |
+| **Persona Visuals** | Designs how each persona looks/sounds |
+| **Content Creation** | Produces videos for each persona strategy |
+| **Creative Direction** | Determines what content will capture attention |
 
-### Hyke (Supporting Role)
+**Key Point**: Hyke handles video generation. The videos are NOT expected to be fully AI-generated - Hyke creates the actual content.
+
+### Matt (Software Development - Systems & Automation)
+
+Your role is to **connect systems together to speed up Hyke's work** via low-hanging fruit automation.
 
 | Component | Description |
 |-----------|-------------|
-| Video Production Expertise | Advising on video generation approaches |
-| Bandwidth Support | Available to help in the 2-4 week window |
-| Tool Integration | Potentially helping with video tool integrations |
+| **Social Listening/Research** | Scrape/monitor TikTok for trending content patterns to inform Hyke's content strategy |
+| **Distribution Automation** | TikTok API integration, scheduling, multi-account posting |
+| **Analytics Infrastructure** | Tracking views, engagement, conversions |
+| **Strategy Analysis** | AI that analyzes what's working vs. not |
+| **Workflow Automation** | Connect tools to speed up Hyke's production pipeline |
+| **Content Pipeline** | Manage content queue, scheduling, posting workflow |
+
+**Low-Hanging Fruit Focus**:
+- Automate the research → Hyke doesn't have to manually find trending content
+- Automate distribution → Hyke doesn't have to manually post to 10 accounts
+- Automate analytics → Easy visibility into what's working
+- Automate scheduling → Content goes out consistently
 
 Jay stated:
 > "Hike could come in and help us in this project with the video part of things, so it just not just be, like, you and your efforts. I think Hike will also have bandwidth in the upcoming two to four weeks to help support this."
@@ -240,55 +328,69 @@ Jay stated:
 
 All work is organized around the two core pillars: **ATTENTION** and **CONVERSION**.
 
+**Key**: Matt builds systems/automation. Hyke creates video content.
+
+**MVP Focus**: 1 persona/strategy first. Scale to multiple personas after MVP proves out.
+
 ### 🎯 PILLAR 1: ATTENTION (Primary Focus)
 
 Everything that drives eyeballs to content.
 
-#### Phase A1: Attention Infrastructure (Week 1)
+#### Phase A1: Research & Strategy Setup (Week 1)
 
-| Task | Estimated Hours | Purpose |
-|------|-----------------|---------|
-| Research trending content patterns in biohacking/skincare | 3-4 hrs | Understand what gets attention |
-| Research video generation tools (HeyGen, D-ID, etc.) | 3-4 hrs | How we create attention-grabbing content |
-| Research TikTok API / distribution options | 2-3 hrs | How we distribute content at scale |
-| Define persona templates (fitness, skincare mom, etc.) | 3-4 hrs | Multiple angles to capture attention |
-| Create strategy knowledge base (MD/PDF docs) | 2-3 hrs | Document what works |
+| Task | Estimated Hours | Owner | Purpose |
+|------|-----------------|-------|---------|
+| Research TikTok API / distribution options | 2-3 hrs | Matt | How to automate posting |
+| Build trending content scraper/monitor | 4-6 hrs | Matt | Surface trends for Hyke |
+| **Define 1 MVP persona with Hyke** | 2-3 hrs | Matt + Hyke | Pick the best starting strategy |
+| Create strategy knowledge base (MD/PDF docs) | 2-3 hrs | Matt | Document the MVP persona rules |
+| Set up project infrastructure | 2-3 hrs | Matt | Dev environment, repos |
 
-**Deliverable**: Clear understanding of attention landscape and tool decisions
+**Deliverable**: MVP persona defined, research tools working, ready to build distribution
 
-#### Phase A2: Attention Engine Build (Weeks 1-2)
+#### Phase A2: Distribution & Pipeline Build (Weeks 1-2)
 
-| Task | Estimated Hours | Purpose |
-|------|-----------------|---------|
-| Build AI persona agent system | 8-12 hrs | Core engine that creates persona-based content |
-| Integrate video generation tool(s) | 6-10 hrs | Produce actual video content |
-| Build TikTok distribution pipeline | 6-8 hrs | Get content in front of eyeballs |
-| Create first 3-5 persona configurations | 4-6 hrs | Multiple strategies running in parallel |
-| Set up content scheduling/automation | 3-4 hrs | Consistent posting cadence |
+| Task | Estimated Hours | Owner | Purpose |
+|------|-----------------|-------|---------|
+| Build TikTok distribution automation | 4-6 hrs | Matt | Post to 1 account automatically |
+| Build content queue/scheduling system | 3-4 hrs | Matt | Manage when content goes out |
+| Create upload workflow for Hyke | 3-4 hrs | Matt | Easy handoff: Hyke's videos → system |
+| Test distribution pipeline | 2-3 hrs | Matt | Ensure posting works reliably |
 
-**Deliverable**: Working pipeline: Persona → Content → TikTok
+**Deliverable**: Working pipeline for 1 account: Hyke uploads → scheduled → posted to TikTok
 
-#### Phase A3: Attention Deployment (Weeks 2-3)
+#### Phase A3: MVP Content Launch (Weeks 2-3)
 
-| Task | Estimated Hours | Purpose |
-|------|-----------------|---------|
-| Generate first batch of content (5+ videos) | 4-6 hrs | Initial content library |
-| Deploy to TikTok accounts | 2-4 hrs | Go live |
-| Monitor posting and debug issues | 4-6 hrs | Ensure content is reaching audience |
-| Iterate on content hooks/formats | 6-10 hrs | Improve attention capture |
+| Task | Estimated Hours | Owner | Purpose |
+|------|-----------------|-------|---------|
+| Support Hyke's content production | 2-4 hrs | Matt | Automation assists as needed |
+| Deploy first 5+ videos via pipeline | 2-3 hrs | Matt | Go live with MVP persona |
+| Monitor posting and debug issues | 3-4 hrs | Matt | Ensure content reaches audience |
+| Refine workflow based on Hyke feedback | 2-3 hrs | Matt | Improve handoff process |
 
-**Deliverable**: First 5+ videos live, generating views
+**Deliverable**: First 5+ videos live on TikTok from 1 persona
 
-#### Phase A4: Attention Optimization (Weeks 3-4+)
+#### Phase A4: MVP Analytics & Learning (Weeks 3-4)
 
-| Task | Estimated Hours | Purpose |
-|------|-----------------|---------|
-| Build attention analytics dashboard | 4-6 hrs | Track views, watch time, engagement |
-| Implement A/B testing for personas | 4-6 hrs | Find winning strategies |
-| Scale to 10 personas/accounts | 6-8 hrs | More experiments = more learning |
-| Build strategy iteration logic | 4-6 hrs | Auto-identify what's working |
+| Task | Estimated Hours | Owner | Purpose |
+|------|-----------------|-------|---------|
+| Build attention analytics dashboard | 4-6 hrs | Matt | Track views, watch time, engagement |
+| Surface insights for Hyke | 2-3 hrs | Matt | What's working? What should Hyke do more of? |
+| Analyze MVP performance | 2-3 hrs | Matt | Is this strategy worth scaling? |
+| **Decide: iterate or pivot** | 1-2 hrs | Team | Based on data, what's next? |
 
-**Deliverable**: Data-driven attention optimization loop
+**Deliverable**: Data-driven decision on whether to scale this strategy or try another
+
+#### Phase A5: Scale Phase (Post-MVP, if proven)
+
+| Task | Estimated Hours | Owner | Purpose |
+|------|-----------------|-------|---------|
+| Add multi-account support | 4-6 hrs | Matt | Handle multiple personas |
+| Define additional personas | 2-3 hrs | Matt + Hyke | Based on MVP learnings |
+| Scale to 5-10 accounts | 4-6 hrs | Matt | More experiments = more learning |
+| Implement strategy comparison views | 3-4 hrs | Matt | Compare persona performance |
+
+**Deliverable**: Multiple personas running in parallel
 
 ---
 
@@ -331,45 +433,68 @@ Everything that turns attention into purchases.
 
 ---
 
-## Time Estimates Summary
+## Time Estimates Summary (Matt's Work Only)
 
-### By Pillar
+Note: These estimates are for **Matt's systems/automation work only**. Hyke's video production time is separate.
+
+### MVP Phase (1 Persona)
 
 | Pillar | Phase | Estimated Hours | Target |
 |--------|-------|-----------------|--------|
-| **ATTENTION** | A1: Infrastructure | 13-18 hrs | End of Week 1 |
-| **ATTENTION** | A2: Engine Build | 27-40 hrs | End of Week 2 |
-| **ATTENTION** | A3: Deployment | 16-26 hrs | End of Week 3 |
-| **ATTENTION** | A4: Optimization | 18-26 hrs | Week 4+ |
+| **ATTENTION** | A1: Research & Strategy | 12-18 hrs | End of Week 1 |
+| **ATTENTION** | A2: Distribution Build (1 account) | 12-17 hrs | End of Week 2 |
+| **ATTENTION** | A3: MVP Content Launch | 9-14 hrs | End of Week 3 |
+| **ATTENTION** | A4: MVP Analytics & Learning | 9-14 hrs | Week 4 |
 | **CONVERSION** | C1: Tracking Setup | 9-14 hrs | Week 2 |
 | **CONVERSION** | C2: Analysis | 9-13 hrs | Weeks 3-4 |
-| **CONVERSION** | C3: Optimization | 10-14 hrs | Week 4+ |
 
-### Totals
+### MVP Totals
 
 | Focus Area | Total Hours | % of Effort |
 |------------|-------------|-------------|
-| **ATTENTION** | 74-110 hrs | ~70% |
-| **CONVERSION** | 28-41 hrs | ~30% |
-| **TOTAL** | **102-151 hours** | 100% |
+| **ATTENTION** (Matt) | 42-63 hrs | ~60% |
+| **CONVERSION** (Matt) | 18-27 hrs | ~40% |
+| **MVP TOTAL** (Matt) | **60-90 hours** | 100% |
 
-**MVP Target**: Weeks 1-3 (~75-90 hours) = Content live + basic tracking
+**MVP Target**: Weeks 1-4 (~60-90 hours) = 1 persona live + basic tracking + learnings
 
-**Note**: Attention is the primary focus because:
-1. Jay explicitly said attention is "the most important thing"
-2. Can't optimize conversion without traffic first
-3. Product story/ingredients handle much of the conversion work
+### Scale Phase (Post-MVP, if proven)
+
+| Pillar | Phase | Estimated Hours | Target |
+|--------|-------|-----------------|--------|
+| **ATTENTION** | A5: Scale to 5-10 accounts | 13-19 hrs | Weeks 5-6 |
+| **CONVERSION** | C3: Optimization | 10-14 hrs | Weeks 5-6+ |
+
+**Scale Total**: Additional 23-33 hours
+
+### Why MVP = 1 Persona First
+
+| Original Scope | MVP Scope | Benefit |
+|----------------|-----------|---------|
+| 10 accounts from start | 1 account first | Faster launch, less complexity |
+| Multi-account management | Single account | Simpler pipeline |
+| Strategy comparison | Prove 1 strategy | Learn before scaling |
+| ~80-117 hours | ~60-90 hours | 20-30% faster to results |
+
+**Note**: This is a leaner, faster path to proving the concept. Scale after we have data on what works.
 
 ---
 
-## Weekly Milestones
+## Weekly Milestones (MVP = 1 Persona)
 
 | Week | Focus | Key Deliverable | Success Metric |
 |------|-------|-----------------|----------------|
-| **Week 1** | Attention Infrastructure | Tools selected, personas defined | Ready to build |
-| **Week 2** | Attention Engine + Conversion Tracking | Pipeline working, tracking in place | Can generate & post content |
-| **Week 3** | Deployment | 5+ videos live on TikTok | Content getting views |
-| **Week 4** | Optimization | Data-driven iteration | Know what's working |
+| **Week 1** | Research & Strategy | 1 MVP persona defined, tools researched | Ready to build pipeline |
+| **Week 2** | Build Pipeline | Distribution working for 1 account | Can post content automatically |
+| **Week 3** | Launch | 5+ videos live from 1 persona | Content getting views |
+| **Week 4** | Learn | Analytics, insights, decision | Know if strategy is working |
+
+### Post-MVP (if proven)
+
+| Week | Focus | Key Deliverable | Success Metric |
+|------|-------|-----------------|----------------|
+| **Week 5-6** | Scale | Multi-account support, additional personas | Multiple strategies running |
+| **Week 7+** | Optimize | Strategy comparison, iteration | Know which personas perform best |
 
 ---
 
@@ -380,10 +505,18 @@ Everything that turns attention into purchases.
 | Risk | Impact | Likelihood | Mitigation |
 |------|--------|------------|------------|
 | TikTok API restrictions | High | Medium | Research alternatives, manual posting fallback |
-| Video generation quality | High | Medium | Test multiple tools early, Hyke advises |
 | Account bans (multi-account) | High | Medium | Stagger creation, follow TOS |
 | Content not gaining traction | Medium | Medium | Expected - system designed to iterate |
 | Algorithm changes | Medium | Low | Diversify personas and strategies |
+| Hyke bandwidth constraints | Medium | Medium | Matt's automation reduces Hyke's manual work |
+
+### Collaboration Risks
+
+| Risk | Impact | Likelihood | Mitigation |
+|------|--------|------------|------------|
+| Misaligned workflow | Medium | Medium | Sync with Hyke early, iterate on handoff process |
+| Content bottleneck (waiting on Hyke) | Medium | Medium | Build pipeline so it's ready when Hyke delivers |
+| Communication gaps | Low | Medium | Regular check-ins between Matt and Hyke |
 
 ### Conversion Risks
 
@@ -402,21 +535,31 @@ Everything that turns attention into purchases.
 
 1. **Platform scope**: Is TikTok the only platform for MVP, or should we plan for Instagram Reels/YouTube Shorts from the start?
 
-2. **Video generation**: Any preferred tools already in use or researched? (e.g., HeyGen, Synthesia, D-ID, custom)
+2. **Hyke's workflow**: What tools does Hyke use to create videos? How should the handoff work (upload location, format, etc.)?
 
-3. **Content type**: Full AI-generated videos, or AI scripts with stock footage, or talking head avatars?
+3. **Trend research**: What specific types of trending content should we surface for Hyke? Any sources he already follows?
 
-4. **DERMA DAO assets**: What product info, images, branding assets are available?
+4. **DERMA DAO assets**: What product info, images, branding assets are available for Hyke to use?
 
-5. **Account management**: Who creates/owns the TikTok accounts? How do we handle credentials?
+5. **Account management**: Who creates/owns the TikTok accounts? How do we handle credentials for automated posting?
+
+6. **Posting frequency**: How many videos per account per day/week? What's the target content volume?
 
 ### 💰 Conversion Questions
 
-6. **Conversion tracking**: Is there existing analytics on BioFi, or do we need to set this up?
+7. **Conversion tracking**: Is there existing analytics on BioFi, or do we need to set this up?
 
-7. **Product page**: Is the DERMA DAO product page ready with the ingredient story and conversion messaging?
+8. **Product page**: Is the DERMA DAO product page ready with the ingredient story and conversion messaging?
 
-8. **Success metrics**: What conversion rate would be considered successful for this MVP?
+9. **Success metrics**: What conversion rate would be considered successful for this MVP?
+
+### 🤝 Collaboration Questions
+
+10. **Communication with Hyke**: How should Matt and Hyke coordinate? Shared tools, check-ins?
+
+11. **Content approval**: Does content need approval before posting, or is it automated once Hyke uploads?
+
+12. **Feedback loop**: How quickly does Hyke need analytics feedback to adjust content strategy?
 
 ---
 
@@ -424,28 +567,36 @@ Everything that turns attention into purchases.
 
 ### Immediate (Before Starting)
 1. Confirm MVP scope and answer key questions above
-2. Get DERMA DAO product assets and messaging
+2. **Pick 1 MVP persona** with Hyke (e.g., fitness, skincare mom, or model)
+3. Sync with Hyke on workflow and collaboration approach
+4. Get DERMA DAO product assets and messaging
 
-### Week 1: Attention Foundation
-3. Set up project infrastructure
-4. Research and select video generation tools
-5. Define first 3-5 persona strategies
-6. Begin building persona agent system
+### Week 1: Research & Strategy (Matt + Hyke)
+5. Set up project infrastructure
+6. Build trending content scraper to surface ideas for Hyke
+7. **Document the 1 MVP persona strategy** (voice, style, content themes)
+8. Begin building TikTok distribution pipeline
 
-### Week 2: Build + Track
-7. Complete attention engine (content generation + distribution)
-8. Set up conversion tracking (UTMs, click tracking)
-9. Generate first batch of content
+### Week 2: Pipeline Complete + Hyke Starts Creating
+9. Complete distribution automation for 1 account (Matt)
+10. Create content upload workflow for Hyke (Matt)
+11. Set up conversion tracking (Matt)
+12. **Hyke begins producing first batch of content for MVP persona**
 
-### Week 3: Go Live
-10. Deploy first 5+ videos to TikTok
-11. Monitor attention metrics (views, engagement)
-12. Begin tracking conversion funnel
+### Week 3: MVP Launch
+13. Deploy first 5+ videos via automated pipeline
+14. Monitor posting, fix any distribution issues
+15. Track attention metrics (views, engagement)
 
-### Week 4+: Optimize Both Pillars
-13. Analyze what's working (attention) and what converts (conversion)
-14. Scale winning strategies, fold losers
-15. Iterate and improve
+### Week 4: Learn & Decide
+16. Surface analytics insights for Hyke
+17. Analyze what's working (attention) and what converts (conversion)
+18. **Decision point**: Is this strategy worth scaling, or try a different persona?
+
+### Post-MVP (if proven)
+19. Add multi-account support
+20. Define additional personas based on learnings
+21. Scale to 5-10 accounts
 
 ---
 
@@ -457,14 +608,14 @@ Everything that turns attention into purchases.
 - **Communication**: Regular updates on progress vs. goals
 - **Flexibility**: Scope can adjust as we learn what works
 
-### Weekly KPI Check-ins
+### Weekly KPI Check-ins (MVP = 1 Persona)
 
 | Week | Attention KPIs | Conversion KPIs |
 |------|----------------|-----------------|
-| Week 1 | Tools selected, personas defined | Tracking plan ready |
-| Week 2 | Pipeline working | Tracking implemented |
-| Week 3 | Videos live, views coming in | Click-throughs tracked |
-| Week 4 | Winning strategies identified | ROI per persona visible |
+| Week 1 | 1 MVP persona defined, tools researched | Tracking plan ready |
+| Week 2 | Pipeline working for 1 account | Tracking implemented |
+| Week 3 | 5+ videos live, views coming in | Click-throughs tracked |
+| Week 4 | Data on MVP strategy performance | ROI visibility for 1 persona |
 
 Per the call:
 > "I would prefer to not waste a lot of time on like scope and philosophy and just get going... I like to eliminate any speed bumps or friction, but make sure we have, let's say, ongoing KPI, another indicator that says, hey, we're moving the right direction"
@@ -473,33 +624,36 @@ Per the call:
 
 ## Appendix: Potential Tech Stack (To Be Validated)
 
-### 🎯 Attention Stack
+### 🎯 Attention Stack (Matt's Systems)
 
-| Component | Options to Explore |
-|-----------|-------------------|
-| AI Persona Agents | Custom (leverage existing platform agent), LangChain, CrewAI |
-| Video Generation | HeyGen, Synthesia, D-ID, Runway, custom pipelines |
-| Content Scheduling | Buffer, Later, custom automation |
-| Distribution | TikTok API, third-party schedulers, manual posting |
-| Attention Analytics | TikTok native analytics, custom dashboard |
-| Knowledge Base | Markdown files, vector DB for retrieval |
+| Component | Options to Explore | Purpose |
+|-----------|-------------------|---------|
+| **Trend Scraping** | Apify, custom scrapers, social listening APIs | Surface trending content for Hyke |
+| **Content Queue** | Custom system, Airtable, Notion API | Manage Hyke's videos through pipeline |
+| **Distribution** | TikTok API, third-party schedulers, manual posting | Automate posting to 10 accounts |
+| **Scheduling** | Custom automation, cron jobs, task queues | Consistent posting cadence |
+| **Attention Analytics** | TikTok native analytics, custom dashboard | Track views, engagement |
+| **Knowledge Base** | Markdown files, Notion | Persona strategy docs |
 
-### 💰 Conversion Stack
+**Note**: Video generation tools (HeyGen, D-ID, etc.) are Hyke's domain, not Matt's focus.
 
-| Component | Options to Explore |
-|-----------|-------------------|
-| Click Tracking | UTM parameters, link shorteners with tracking |
-| Attribution | Segment, Mixpanel, custom tracking |
-| Conversion Analytics | BioFi native analytics, custom dashboard |
-| Funnel Analysis | Segment, Amplitude, custom |
+### 💰 Conversion Stack (Matt's Systems)
+
+| Component | Options to Explore | Purpose |
+|-----------|-------------------|---------|
+| **Click Tracking** | UTM parameters, link shorteners with tracking | Attribution by video/persona |
+| **Attribution** | Segment, Mixpanel, custom tracking | End-to-end funnel visibility |
+| **Conversion Analytics** | BioFi native analytics, custom dashboard | CTR, purchases, revenue |
+| **Funnel Analysis** | Segment, Amplitude, custom | Where users drop off |
 
 ### Infrastructure
 
-| Component | Options to Explore |
-|-----------|-------------------|
-| Compute | Cloud functions, containerized services |
-| Storage | S3/GCS for video assets |
-| Database | PostgreSQL, MongoDB for analytics data |
+| Component | Options to Explore | Purpose |
+|-----------|-------------------|---------|
+| **Compute** | Cloud functions, containerized services | Run automation jobs |
+| **Storage** | S3/GCS for video assets | Store Hyke's videos for distribution |
+| **Database** | PostgreSQL, MongoDB | Analytics data, content queue |
+| **Existing Platform** | Matt's agent platform (shown in call) | Potential backend for research agents |
 
 ---
 
