@@ -40,9 +40,11 @@ Most content is brand ambassador style (80%) with sales moments woven in natural
 
 **MVP Focus**: 1 persona/strategy first. Scale to multiple personas after MVP proves out.
 
-**Priority**: Speed over perfection. Get content distributing immediately.
+**Priority**: Speed over perfection. Get content distributing and iterate.
 
-**Timeline**: First 5+ videos from 1 persona live on TikTok by end of January 2025.
+**Timeline**: ~5 weeks to MVP complete (first videos live + learnings)
+
+**Estimated Hours**: 76-114 hours (Matt's systems work)
 
 ---
 
@@ -414,26 +416,40 @@ Everything that turns attention into purchases.
 
 Note: These estimates are for **Matt's systems/automation work only**. Hyke's video production time is separate.
 
+Estimates include buffer for:
+- Debugging and troubleshooting
+- API limitations or unexpected blockers
+- Iteration based on feedback
+- Coordination overhead
+
 ### MVP Scope (This Engagement)
 
 | Pillar | Phase | Estimated Hours | Target |
 |--------|-------|-----------------|--------|
-| **ATTENTION** | A1: Research & Strategy | 12-18 hrs | End of Week 1 |
-| **ATTENTION** | A2: Distribution Build (1 account) | 12-17 hrs | End of Week 2 |
-| **ATTENTION** | A3: MVP Content Launch | 9-14 hrs | End of Week 3 |
-| **ATTENTION** | A4: MVP Analytics & Learning | 9-14 hrs | Week 4 |
-| **CONVERSION** | C1: Tracking Setup | 9-14 hrs | Week 2 |
-| **CONVERSION** | C2: Analysis | 9-13 hrs | Weeks 3-4 |
+| **ATTENTION** | A1: Research & Strategy | 15-22 hrs | End of Week 1 |
+| **ATTENTION** | A2: Distribution Build (1 account) | 15-22 hrs | End of Week 2-3 |
+| **ATTENTION** | A3: MVP Content Launch | 12-18 hrs | Weeks 3-4 |
+| **ATTENTION** | A4: MVP Analytics & Learning | 12-18 hrs | Weeks 4-5 |
+| **CONVERSION** | C1: Tracking Setup | 12-18 hrs | Weeks 2-3 |
+| **CONVERSION** | C2: Analysis | 10-16 hrs | Weeks 4-5 |
 
 ### MVP Totals
 
 | Focus Area | Total Hours | % of Effort |
 |------------|-------------|-------------|
-| **ATTENTION** (Matt) | 42-63 hrs | ~60% |
-| **CONVERSION** (Matt) | 18-27 hrs | ~40% |
-| **MVP TOTAL** (Matt) | **60-90 hours** | 100% |
+| **ATTENTION** (Matt) | 54-80 hrs | ~60% |
+| **CONVERSION** (Matt) | 22-34 hrs | ~40% |
+| **MVP TOTAL** (Matt) | **76-114 hours** | 100% |
 
-**MVP Target**: Weeks 1-4 (~60-90 hours) = 1 persona live + basic tracking + learnings
+**MVP Target**: Weeks 1-5 (~76-114 hours) = 1 persona live + basic tracking + learnings
+
+### Timeline Note
+
+This is a realistic timeline assuming:
+- Part-time availability (not full-time dedicated)
+- Coordination with Hyke's schedule
+- Normal troubleshooting and iteration cycles
+- Some buffer for unknowns (API issues, platform changes, etc.)
 
 *Future phases (scale, full system) would require separate scoping and engagement.*
 
@@ -444,9 +460,10 @@ Note: These estimates are for **Matt's systems/automation work only**. Hyke's vi
 | Week | Focus | Key Deliverable | Success Metric |
 |------|-------|-----------------|----------------|
 | **Week 1** | Research & Strategy | 1 MVP persona defined, tools researched | Ready to build pipeline |
-| **Week 2** | Build Pipeline | Distribution working for 1 account | Can post content automatically |
-| **Week 3** | Launch | 5+ videos live from 1 persona | Content getting views |
-| **Week 4** | Learn | Analytics, insights, decision | Know if strategy is working |
+| **Week 2** | Build Pipeline | Distribution pipeline in progress | Core automation working |
+| **Week 3** | Pipeline + Tracking | Distribution complete, tracking setup | Can post content automatically |
+| **Week 4** | Launch | First videos live from 1 persona | Content reaching audience |
+| **Week 5** | Learn & Analyze | Analytics, insights, decision | Know if strategy is working |
 
 *Post-MVP phases would be scoped separately.*
 
@@ -564,9 +581,10 @@ Note: These estimates are for **Matt's systems/automation work only**. Hyke's vi
 | Week | Attention KPIs | Conversion KPIs |
 |------|----------------|-----------------|
 | Week 1 | 1 MVP persona defined, tools researched | Tracking plan ready |
-| Week 2 | Pipeline working for 1 account | Tracking implemented |
-| Week 3 | 5+ videos live, views coming in | Click-throughs tracked |
-| Week 4 | Data on MVP strategy performance | ROI visibility for 1 persona |
+| Week 2 | Pipeline build in progress | Tracking implementation started |
+| Week 3 | Pipeline complete, ready to post | Tracking implemented |
+| Week 4 | First videos live, views coming in | Click-throughs tracked |
+| Week 5 | Data on MVP strategy performance | ROI visibility for 1 persona |
 
 Per the call:
 > "I would prefer to not waste a lot of time on like scope and philosophy and just get going... I like to eliminate any speed bumps or friction, but make sure we have, let's say, ongoing KPI, another indicator that says, hey, we're moving the right direction"
