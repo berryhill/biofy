@@ -239,19 +239,16 @@ The goal is to **remove friction from Hyke's workflow** through:
 
 ---
 
-## MVP vs Full System
+## Scope: MVP (1 Persona)
 
-### Option A: MVP (Recommended to Start)
+This engagement covers the **MVP phase only**. Future phases will require separate scoping.
 
-**Key Decision: Focus on 1 Persona/Strategy First**
+### MVP Scope (This Engagement)
 
-The MVP should prove the concept with **one strategy** before scaling to 10.
-
-**MVP Scope**:
 - **1 TikTok account** with 1 persona strategy
 - Backend only - no front-end dashboard
 - Strategy defined via MD/PDF knowledge documents
-- Manual/semi-automated content workflow
+- Automated distribution pipeline
 - Basic analytics tracking
 
 **Goal**: First 5 videos from 1 persona distributed by **end of January 2025**
@@ -266,24 +263,13 @@ The MVP should prove the concept with **one strategy** before scaling to 10.
 **Approach**:
 > "Even though it's a bad strategy, at least we will put in something... if it do very well in the next three to four weeks and it has some hits, that it's sort of proven strategy that this is working"
 
-### Option B: Scale Phase (After MVP Proves Out)
+---
 
-Once the MVP is working and we have data:
+### Future Phases (Not Scoped - Requires Separate Engagement)
 
-**Scale Scope**:
-- Expand to 5-10 TikTok accounts with different personas
-- Multi-account distribution automation
-- Compare persona performance
-- Scale winning strategies, fold losers
+**Scale Phase**: Expand to 5-10 personas/accounts, multi-account automation, strategy comparison
 
-### Option C: Full System (Future Phase)
-
-**Additional Scope**:
-- Front-end platform for DAO owners
-- Self-service persona creation and management
-- Automated strategy optimization
-- Multi-tenant support for different DAOs/products
-- Advanced analytics dashboard
+**Full System**: Front-end dashboard, self-service persona management, multi-tenant support
 
 ---
 
@@ -381,16 +367,7 @@ Everything that drives eyeballs to content.
 
 **Deliverable**: Data-driven decision on whether to scale this strategy or try another
 
-#### Phase A5: Scale Phase (Post-MVP, if proven)
-
-| Task | Estimated Hours | Owner | Purpose |
-|------|-----------------|-------|---------|
-| Add multi-account support | 4-6 hrs | Matt | Handle multiple personas |
-| Define additional personas | 2-3 hrs | Matt + Hyke | Based on MVP learnings |
-| Scale to 5-10 accounts | 4-6 hrs | Matt | More experiments = more learning |
-| Implement strategy comparison views | 3-4 hrs | Matt | Compare persona performance |
-
-**Deliverable**: Multiple personas running in parallel
+*Note: Scale phase (multi-account, additional personas) would be a separate engagement.*
 
 ---
 
@@ -433,11 +410,11 @@ Everything that turns attention into purchases.
 
 ---
 
-## Time Estimates Summary (Matt's Work Only)
+## Time Estimates (MVP Only)
 
 Note: These estimates are for **Matt's systems/automation work only**. Hyke's video production time is separate.
 
-### MVP Phase (1 Persona)
+### MVP Scope (This Engagement)
 
 | Pillar | Phase | Estimated Hours | Target |
 |--------|-------|-----------------|--------|
@@ -458,29 +435,11 @@ Note: These estimates are for **Matt's systems/automation work only**. Hyke's vi
 
 **MVP Target**: Weeks 1-4 (~60-90 hours) = 1 persona live + basic tracking + learnings
 
-### Scale Phase (Post-MVP, if proven)
-
-| Pillar | Phase | Estimated Hours | Target |
-|--------|-------|-----------------|--------|
-| **ATTENTION** | A5: Scale to 5-10 accounts | 13-19 hrs | Weeks 5-6 |
-| **CONVERSION** | C3: Optimization | 10-14 hrs | Weeks 5-6+ |
-
-**Scale Total**: Additional 23-33 hours
-
-### Why MVP = 1 Persona First
-
-| Original Scope | MVP Scope | Benefit |
-|----------------|-----------|---------|
-| 10 accounts from start | 1 account first | Faster launch, less complexity |
-| Multi-account management | Single account | Simpler pipeline |
-| Strategy comparison | Prove 1 strategy | Learn before scaling |
-| ~80-117 hours | ~60-90 hours | 20-30% faster to results |
-
-**Note**: This is a leaner, faster path to proving the concept. Scale after we have data on what works.
+*Future phases (scale, full system) would require separate scoping and engagement.*
 
 ---
 
-## Weekly Milestones (MVP = 1 Persona)
+## Weekly Milestones (MVP)
 
 | Week | Focus | Key Deliverable | Success Metric |
 |------|-------|-----------------|----------------|
@@ -489,12 +448,7 @@ Note: These estimates are for **Matt's systems/automation work only**. Hyke's vi
 | **Week 3** | Launch | 5+ videos live from 1 persona | Content getting views |
 | **Week 4** | Learn | Analytics, insights, decision | Know if strategy is working |
 
-### Post-MVP (if proven)
-
-| Week | Focus | Key Deliverable | Success Metric |
-|------|-------|-----------------|----------------|
-| **Week 5-6** | Scale | Multi-account support, additional personas | Multiple strategies running |
-| **Week 7+** | Optimize | Strategy comparison, iteration | Know which personas perform best |
+*Post-MVP phases would be scoped separately.*
 
 ---
 
@@ -593,10 +547,7 @@ Note: These estimates are for **Matt's systems/automation work only**. Hyke's vi
 17. Analyze what's working (attention) and what converts (conversion)
 18. **Decision point**: Is this strategy worth scaling, or try a different persona?
 
-### Post-MVP (if proven)
-19. Add multi-account support
-20. Define additional personas based on learnings
-21. Scale to 5-10 accounts
+*Post-MVP phases would require separate scoping and engagement.*
 
 ---
 
