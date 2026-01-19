@@ -44,7 +44,7 @@ Most content is brand ambassador style (80%) with sales moments woven in natural
 
 **Timeline**: ~5 weeks to MVP complete (first videos live + learnings)
 
-**Estimated Hours**: 76-114 hours (Matt's systems work)
+**Estimated Hours**: 90-130 hours (Matt's systems work)
 
 ---
 
@@ -426,22 +426,22 @@ Estimates include buffer for:
 
 | Pillar | Phase | Estimated Hours | Target |
 |--------|-------|-----------------|--------|
-| **ATTENTION** | A1: Research & Strategy | 15-22 hrs | End of Week 1 |
-| **ATTENTION** | A2: Distribution Build (1 account) | 15-22 hrs | End of Week 2-3 |
-| **ATTENTION** | A3: MVP Content Launch | 12-18 hrs | Weeks 3-4 |
-| **ATTENTION** | A4: MVP Analytics & Learning | 12-18 hrs | Weeks 4-5 |
-| **CONVERSION** | C1: Tracking Setup | 12-18 hrs | Weeks 2-3 |
-| **CONVERSION** | C2: Analysis | 10-16 hrs | Weeks 4-5 |
+| **ATTENTION** | A1: Research & Strategy | 18-26 hrs | End of Week 1 |
+| **ATTENTION** | A2: Distribution Build (1 account) | 18-26 hrs | End of Week 2-3 |
+| **ATTENTION** | A3: MVP Content Launch | 14-20 hrs | Weeks 3-4 |
+| **ATTENTION** | A4: MVP Analytics & Learning | 14-20 hrs | Weeks 4-5 |
+| **CONVERSION** | C1: Tracking Setup | 14-20 hrs | Weeks 2-3 |
+| **CONVERSION** | C2: Analysis | 12-18 hrs | Weeks 4-5 |
 
 ### MVP Totals
 
 | Focus Area | Total Hours | % of Effort |
 |------------|-------------|-------------|
-| **ATTENTION** (Matt) | 54-80 hrs | ~60% |
-| **CONVERSION** (Matt) | 22-34 hrs | ~40% |
-| **MVP TOTAL** (Matt) | **76-114 hours** | 100% |
+| **ATTENTION** (Matt) | 64-92 hrs | ~70% |
+| **CONVERSION** (Matt) | 26-38 hrs | ~30% |
+| **MVP TOTAL** (Matt) | **90-130 hours** | 100% |
 
-**MVP Target**: Weeks 1-5 (~76-114 hours) = 1 persona live + basic tracking + learnings
+**MVP Target**: Weeks 1-5 (~90-130 hours) = 1 persona live + basic tracking + learnings
 
 ### Timeline Note
 
