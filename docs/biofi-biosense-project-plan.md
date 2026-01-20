@@ -40,6 +40,8 @@ Most content is brand ambassador style (80%) with sales moments woven in natural
 
 **MVP Focus**: 1 persona/strategy first. Scale to multiple personas after MVP proves out.
 
+**MVP Includes**: Backend automation only. **No front-end dashboard**. Integrating with upstream AI/automation services.
+
 **Priority**: Speed over perfection. Get content distributing and iterate.
 
 **Timeline**: ~5 weeks to MVP complete (first videos live + learnings)
@@ -250,12 +252,23 @@ This engagement covers the **MVP phase only**. Future phases will require separa
 ### MVP Scope (This Engagement)
 
 - **1 TikTok account** with 1 persona strategy
-- Backend only - no front-end dashboard
+- **No front-end** - backend/automation only
+- **Integration-based** - leveraging upstream AI/automation services (not building custom AI infrastructure)
 - Strategy defined via MD/PDF knowledge documents
 - Automated distribution pipeline
 - Basic analytics tracking
 
-**Goal**: First 5 videos from 1 persona distributed by **end of January 2025**
+### Technical Approach
+
+Matt will integrate with existing upstream services for AI agent infrastructure rather than building custom AI systems from scratch. This includes:
+- Third-party social listening/scraping tools (e.g., Apify)
+- Existing scheduling/distribution platforms
+- Analytics platforms (Segment, etc.)
+- Matt's existing agent platform for research automation
+
+**This keeps scope focused on integration and orchestration, not building AI from scratch.**
+
+**Goal**: First videos from 1 persona distributed by **end of January 2025**
 
 **Why 1 Strategy First**:
 1. Faster to launch - less complexity
