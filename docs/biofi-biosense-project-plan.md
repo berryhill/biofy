@@ -58,10 +58,10 @@ A content marketing system that:
 3. **Distributes** content to TikTok and potentially other platforms (Matt automates)
 4. **Analyzes** performance and optimizes strategies (Matt builds analytics)
 
-### The Multi-Persona Strategy
+### The Multi-Persona Strategy (Future Vision)
 
-Jay wants to test multiple strategies simultaneously:
-- Create ~10 TikTok accounts, each with a different persona
+Jay's long-term vision is to test multiple strategies simultaneously:
+- Create multiple TikTok accounts, each with a different persona
 - Example personas mentioned:
   - Fitness persona
   - Female model persona
@@ -69,6 +69,8 @@ Jay wants to test multiple strategies simultaneously:
 - Test which strategies gain traction
 - Fold failing strategies, double down on winners
 - Continuously iterate with new personas
+
+**Note**: This is the future vision. MVP starts with **1 persona** to prove the system works.
 
 Each persona embodies both roles:
 
@@ -235,7 +237,7 @@ Organized by the two pillars, with clear separation of Hyke's work (video produc
 The goal is to **remove friction from Hyke's workflow** through:
 
 1. **Automated Research**: Hyke shouldn't have to manually hunt for trending content
-2. **Automated Distribution**: Hyke shouldn't have to manually post to 10 accounts
+2. **Automated Distribution**: Hyke shouldn't have to manually post content
 3. **Automated Analytics**: Easy visibility into what's working
 4. **Content Pipeline**: Smooth handoff from Hyke's videos → scheduled posting
 
@@ -303,7 +305,7 @@ Your role is to **connect systems together to speed up Hyke's work** via low-han
 
 **Low-Hanging Fruit Focus**:
 - Automate the research → Hyke doesn't have to manually find trending content
-- Automate distribution → Hyke doesn't have to manually post to 10 accounts
+- Automate distribution → Hyke doesn't have to manually post content
 - Automate analytics → Easy visibility into what's working
 - Automate scheduling → Content goes out consistently
 
@@ -599,7 +601,7 @@ Per the call:
 |-----------|-------------------|---------|
 | **Trend Scraping** | Apify, custom scrapers, social listening APIs | Surface trending content for Hyke |
 | **Content Queue** | Custom system, Airtable, Notion API | Manage Hyke's videos through pipeline |
-| **Distribution** | TikTok API, third-party schedulers, manual posting | Automate posting to 10 accounts |
+| **Distribution** | TikTok API, third-party schedulers, manual posting | Automate posting (MVP: 1 account) |
 | **Scheduling** | Custom automation, cron jobs, task queues | Consistent posting cadence |
 | **Attention Analytics** | TikTok native analytics, custom dashboard | Track views, engagement |
 | **Knowledge Base** | Markdown files, Notion | Persona strategy docs |
