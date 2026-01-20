@@ -9,6 +9,8 @@
 
 ## Executive Summary
 
+**This MVP is a Proof of Value (POV)** - the beginning of a larger initiative, not the end product. The goal is to validate the approach quickly and learn what works before investing in a full-scale system.
+
 BioFi is a Web3 e-commerce platform that enables DAOs to sell direct-to-consumer biohacking and supplementation products. The first client is **DERMA DAO**, a Korean skincare DAO launching their beauty brand.
 
 Jay wants to build **BioSense** - a content marketing system where AI personas act as both **sales reps** and **brand ambassadors** through short-form video content (primarily TikTok).
