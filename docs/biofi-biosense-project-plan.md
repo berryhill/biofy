@@ -199,7 +199,7 @@ Organized by the two pillars, with clear separation of Hyke's work (video produc
 │  ║                                                                       ║  │
 │  ║  4. DISTRIBUTION [MATT]                                               ║  │
 │  ║     - Automate posting to TikTok                                      ║  │
-│  ║     - MVP: 1 account, Scale: 5-10 accounts                            ║  │
+│  ║     - MVP: 1 account only                                             ║  │
 │  ║     - Scheduling and content queue management                         ║  │
 │  ║                                                                       ║  │
 │  ║  5. ATTENTION ANALYTICS [MATT]                                        ║  │
@@ -271,7 +271,7 @@ This engagement covers the **MVP phase only**. Future phases will require separa
 
 ### Future Phases (Not Scoped - Requires Separate Engagement)
 
-**Scale Phase**: Expand to 5-10 personas/accounts, multi-account automation, strategy comparison
+**Scale Phase**: Expand to additional personas/accounts, multi-account automation, strategy comparison
 
 **Full System**: Front-end dashboard, self-service persona management, multi-tenant support
 
